@@ -1,4 +1,4 @@
-export function SideBar() {
+export function SideBar(props: any) {
   // Complete aqui
 
   return (
@@ -7,7 +7,7 @@ export function SideBar() {
         <span>Watch<p>Me</p></span>
 
         <div className="buttons-container">
-          props.children()
+          {props.children}
         </div>
 
       </nav>
