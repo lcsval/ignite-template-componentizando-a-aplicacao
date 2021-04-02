@@ -74,7 +74,17 @@ export function App() {
         </div>
 
       </nav> */}
-      <SideBar></SideBar>
+      <SideBar>
+        {genres.map(genre => (
+          <Button
+            key={String(genre.id)}
+            title={genre.title}
+            iconName={genre.name}
+            onClick={() => handleClickButton(genre.id)}
+            selected={selectedGenreId === genre.id}
+          />
+        ))}
+      </SideBar>
 
       <div className="container">
         <Content title={selectedGenre.title} movies={movies}></Content>
